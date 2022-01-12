@@ -20,9 +20,9 @@ const eqArrays = (actual, expected) => {
 };
 
 const eqObjects = (object1, object2) => {
-  if (object1 === object2) return true
+  if (object1 === object2) return true;
 
-  if (typeof object1 !== "object" || typeof object2 !== "object") return false
+  if (typeof object1 !== "object" || typeof object2 !== "object") return false;
 
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
@@ -30,7 +30,7 @@ const eqObjects = (object1, object2) => {
   if (keys1.length !== keys2.length) return false;
 
   for (let key of keys1) {
-    if (!keys2.includes(key) || !eqObjects(object1[key], object2[key])) return false
+    if (!keys2.includes(key) || !eqObjects(object1[key], object2[key])) return false;
   }
   return true;
 };
