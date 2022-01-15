@@ -6,11 +6,7 @@ const assertEqual = (actual, expected) => {
   }
 };
 
-const findKey = (obj, func) => {
-  for (let key in obj) {
-    if (func(obj[key])) return key;
-  }
-};
+const findKey = (obj, func) => Object.keys(obj).find(k => func(obj[k]));
 
 // TESTS
 // assertEqual(findKey({
