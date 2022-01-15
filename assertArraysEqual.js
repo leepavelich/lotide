@@ -12,11 +12,9 @@ const eqArrays = (actual, expected) => {
 };
 
 const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual,expected)) {
-    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
-  }
+  console.log(eqArrays(actual, expected)
+    ? `✅✅✅ Assertion Passed: [${actual}] === [${expected}]`
+    : `🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
 };
 
 // TESTS
