@@ -8,9 +8,9 @@ const assertEqual = (actual, expected) => {
 
 const findKey = (obj, func) => {
   for (let key in obj) {
-    if (func(obj[key])) return key
+    if (func(obj[key])) return key;
   }
-}
+};
 
 // TESTS
 // assertEqual(findKey({
