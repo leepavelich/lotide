@@ -19,18 +19,7 @@ const assertArraysEqual = (actual, expected) => {
   }
 };
 
-const flatten = arr => {
-  let newArr = [];
-  for (let elem of arr) {
-    if (!Array.isArray(elem)) {
-      newArr.push(elem);
-    } else {
-      for (let subelem of elem) {
-        newArr.push(subelem);
-      }
-    }
-  }
-  return newArr;
-};
+const flatten = arr => [].concat(...arr);
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+// TESTS
+// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
