@@ -20,11 +20,11 @@ const assertArraysEqual = (actual, expected) => {
 };
 
 const without = (source, itemsToRemove) => {
-  let outArr = source.slice();
+  let passed = source.slice();
   for (let item of itemsToRemove) {
-    outArr = outArr.filter(elem => elem !== item);
+    passed = passed.filter(elem => elem !== item);
   }
-  return outArr;
+  return passed
 };
 
 // TESTS
