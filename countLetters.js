@@ -7,18 +7,14 @@ const assertEqual = (actual, expected) => {
 };
 
 const countLetters = sentence => {
-  let chars = sentence.slice().split(' ').join('');
-  const counts = {};
-  for (let char of chars) {
-    if (char in counts) {
-      counts[char] += 1;
-    } else {
-      counts[char] = 1;
-    }
+  sentence = sentence.slice().split(' ').join('');
+  let counts = {};
+  for (let char of sentence) {
+    counts[char] = (counts[char] + 1) || 1;
   }
   return counts;
 };
 
 // TESTS
-console.log(countLetters('LHL'));
-console.log(countLetters('lighthouse in the house'));
+// console.log(countLetters('LHL'));
+// console.log(countLetters('lighthouse in the house'));
