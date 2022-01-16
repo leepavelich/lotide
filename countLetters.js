@@ -10,7 +10,7 @@ const countLetters = sentence => {
   sentence = sentence.slice().split(' ').join('');
   let counts = {};
   for (let char of sentence) {
-    counts[char] = (counts[char] + 1) || 1;
+    counts[char] = char in counts ? counts[char] + 1 : 1
   }
   return counts;
 };
