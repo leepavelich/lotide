@@ -7,7 +7,3 @@ const map = (array, func) => {
 }
 
 module.exports = map;
-
-// TESTS
-// const words = ["ground", "control", "to", "major", "tom"];
-// console.log(map(words, word => word[0]))
