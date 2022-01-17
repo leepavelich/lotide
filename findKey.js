@@ -1,12 +1,6 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const findKey = (obj, func) => Object.keys(obj).find(k => func(obj[k]));
+
+module.exports = findKey;
 
 // TESTS
 // assertEqual(findKey({

@@ -1,24 +1,3 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-const eqArrays = (actual, expected) => {
-  if (actual.length !== expected.length) {
-    return false;
-  } else {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] !== expected[i]) {
-        return false;
-      }
-    }
-  }
-  return true;
-};
-
 const eqObjects = (actual, expected) => {
   if (actual === expected) return true;
   if (typeof actual !== "object" || typeof expected !== "object") return false;
@@ -31,6 +10,8 @@ const eqObjects = (actual, expected) => {
   }
   return true;
 };
+
+module.exports = eqObjects;
 
 // TESTS
 // const ab = { a: "1", b: "2" };
