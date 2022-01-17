@@ -1,0 +1,7 @@
+const assertEqual = (actual, expected) => {
+  console.log(actual === expected
+    ? `✅✅✅ Assertion Passed: ${actual} === ${expected}`
+    : `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+};
+
+module.exports = assertEqual;
