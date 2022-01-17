@@ -9,10 +9,3 @@ const letterPositions = sentence => {
 };
 
 module.exports = letterPositions;
-
-// TESTS
-// assertArraysEqual(letterPositions('hello').h, [0]);
-// assertArraysEqual(letterPositions('hello').e, [1]);
-// assertArraysEqual(letterPositions('hello').l, [2,3]);
-// assertArraysEqual(letterPositions('hello').o, [4]);
-// console.log(letterPositions('lighthouse in the house'))
