@@ -8,7 +8,3 @@ const countLetters = sentence => {
 };
 
 module.exports = countLetters;
-
-// TESTS
-// console.log(countLetters('LHL'));
-// console.log(countLetters('lighthouse in the house'));g
